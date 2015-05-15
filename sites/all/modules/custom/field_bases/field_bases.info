@@ -1,0 +1,14 @@
+name = field_bases
+core = 7.x
+package = Features
+dependencies[] = date
+dependencies[] = features
+dependencies[] = image
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_date
+features[field_base][] = field_image
+features[field_base][] = field_topic
+features[taxonomy][] = topics

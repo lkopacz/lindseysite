@@ -1,0 +1,15 @@
+name = blog_page
+core = 7.x
+package = Features
+dependencies[] = date
+dependencies[] = features
+dependencies[] = field_bases
+dependencies[] = node
+dependencies[] = options
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-blog-body
+features[field_instance][] = node-blog-field_date
+features[field_instance][] = node-blog-field_topic
+features[node][] = blog
