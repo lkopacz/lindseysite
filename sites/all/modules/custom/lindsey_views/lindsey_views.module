@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the lindsey_views feature.
+ */
+
+include_once 'lindsey_views.features.inc';
