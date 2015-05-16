@@ -5,13 +5,16 @@
 	
 function lindsey_contact_form_menu() {
 	$items['contact-me'] = array(
-		'page callback' => 'lindsey_contact_form_form',	
-	
+		'title' => 'Contact Me',		
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('lindsey_contact_form_form'),
+		'access arguments' => array('access content'),
 	);
 	return $items; 
 }
 
 function lindsey_contact_form_form($node, &$form_state) {
+	global $user;	
 	$form = array();	
 	$form['input_name'] = array(
 		'#type' => 'textfield',
@@ -23,7 +26,33 @@ function lindsey_contact_form_form($node, &$form_state) {
 		'#type' => 'textfield',
 		'#title' => t('Email'),
 		'#required' => TRUE,
-		
+		'#default_value' => $user->mail,
+		'#element_validate' => array('lindsey_form_email_validate'),
+	);
+	$form['input_select_reason'] = array(
+		'#type' => 'select',
+		'#title' => 'Reason for Contact',
+		'#options' => array(
+			0 => 'General Inquires',
+			1 => 'Advice',
+			2 => 'Freelance Opportunites',
+		),
+	);
+	$form['input_body'] = array(
+		'#type' => 'textarea',
+		'#title' => 'Body/Comments',
+		'#required' => TRUE,
+	);
+	$form['contact_form_submit'] = array(
+		'#type' => 'submit',
+		'#value' => 'Submit',
 	);
 	return $form;
+}
+
+function lindsey_form_email_validate($form, &$form_state) {
+  $value = $form_state['values']['input_email'];
+  if (!valid_email_address($value)) {
+    form_set_error('input_email',  'Sorry. Your email address is not valid. Please submit a valid E-mail address.');
+  }
 }
