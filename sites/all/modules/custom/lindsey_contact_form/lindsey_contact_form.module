@@ -46,6 +46,7 @@ function lindsey_contact_form_form($node, &$form_state) {
 	$form['contact_form_submit'] = array(
 		'#type' => 'submit',
 		'#value' => 'Submit',
+		//'#submit' => array('lindsey_email'),
 	);
 	return $form;
 }
@@ -55,4 +56,14 @@ function lindsey_form_email_validate($form, &$form_state) {
   if (!valid_email_address($value)) {
     form_set_error('input_email',  'Sorry. Your email address is not valid. Please submit a valid E-mail address.');
   }
+}
+
+function lindsey_email(&$form_state) {
+	$site_email = variable_get('site_mail', '');
+	drupal_mail('lindsey_contact_form', 'send_contact_mail', $site_email, language_default(), 
+	$params = array(
+		'subject' => 'Test subject',
+  		'body' => 'Test body'	
+	), 
+	$form_state['values']['input_email'], $send = TRUE);
 }
