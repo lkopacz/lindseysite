@@ -1,0 +1,29 @@
+<?php
+/***
+	*Implements hook_menu
+	*/
+	
+function lindsey_contact_form_menu() {
+	$items['contact-me'] = array(
+		'page callback' => 'lindsey_contact_form_form',	
+	
+	);
+	return $items; 
+}
+
+function lindsey_contact_form_form($node, &$form_state) {
+	$form = array();	
+	$form['input_name'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Name'),	
+		'#maxlength' => 128,
+		'#required' => TRUE,
+	); 
+	$form['input_email'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Email'),
+		'#required' => TRUE,
+		
+	);
+	return $form;
+}
