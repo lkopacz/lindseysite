@@ -1,0 +1,7 @@
+name = Lindseys Image Styles
+core = 7.x
+package = Features
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = slider
+project path = sites/all/modules/custom

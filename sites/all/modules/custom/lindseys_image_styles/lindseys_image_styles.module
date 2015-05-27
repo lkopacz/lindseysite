@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Lindseys Image Styles feature.
+ */
+
+include_once 'lindseys_image_styles.features.inc';
