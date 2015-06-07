@@ -70,15 +70,24 @@ body #admin-menu .dropdown li {
   .navbar.container {
     max-width: 720px;
   }
+  .container {
+    width: 720px;
+  }
 }
 @media screen and (min-width: 992px) {
   .navbar.container {
     max-width: 940px;
   }
+  .container {
+	width: 940px; 
+  }
 }
 @media screen and (min-width: 1200px) {
   .navbar.container {
     max-width: 1140px;
+  }
+  .container {
+	width: 1140px;
   }
 }
 .navbar.container > .container {
@@ -588,3 +597,12 @@ table .checkbox input[type="checkbox"] {
 .navbar-default .navbar-brand {
   color: #ffffff;
 }
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+.main-container {
+  background-color: #666666;
+}
+@media (min-width: 1200px)
+.container
