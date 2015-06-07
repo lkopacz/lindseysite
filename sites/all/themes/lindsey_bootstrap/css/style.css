@@ -113,10 +113,10 @@ body #admin-menu .dropdown li {
   z-index: 1610;
 }
 .footer {
-  margin-top: 45px;
+  margin-top: 0px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  background-color: #10206B;	
 }
 .element-invisible {
   margin: 0;
@@ -590,7 +590,7 @@ table .checkbox input[type="checkbox"] {
 }
 
 #navbar{
-  background-color: #25AAA0;
+  background-color: #10206B;
   border: 0px;
   margin-top:0px;
 }
@@ -602,7 +602,12 @@ table .checkbox input[type="checkbox"] {
   margin-bottom: 0px;
 }
 .main-container {
-  background-color: #666666;
+  background-color: #25AAA0;
 }
-@media (min-width: 1200px)
-.container
+.page-header {
+  border-bottom: 0px;
+}
+h1.page-header {
+  padding-top: 10px;
+}
+
