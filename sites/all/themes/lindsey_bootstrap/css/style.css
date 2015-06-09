@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
 }
@@ -9,6 +11,7 @@ html.js input.form-autocomplete {
 }
 body {
   position: relative;
+  font-family: 'Oswald', sans-serif;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
@@ -595,6 +598,9 @@ table .checkbox input[type="checkbox"] {
   margin-top:0px;
 }
 .navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a {
   color: #ffffff;
 }
 .navbar {
