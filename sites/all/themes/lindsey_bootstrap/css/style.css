@@ -12,6 +12,7 @@ html.js input.form-autocomplete {
 body {
   position: relative;
   font-family: 'Oswald', sans-serif;
+  background-color: #f1efe6;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
@@ -66,6 +67,9 @@ body #admin-menu {
 body #admin-menu .dropdown li {
   line-height: normal;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
 .navbar.container {
   margin-top: 0px;
 }
@@ -119,7 +123,8 @@ body #admin-menu .dropdown li {
   margin-top: 0px;
   padding-top: 35px;
   padding-bottom: 36px;
-  background-color: #10206B;	
+  background-color: #10206B;
+  border-top: 1px solid #10206B;	
 }
 .element-invisible {
   margin: 0;
@@ -597,11 +602,13 @@ table .checkbox input[type="checkbox"] {
   border: 0px;
   margin-top:0px;
 }
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
-  color: #ffffff;
+  color: #f1efe6;
+}
+a:hover.name.navbar-brand,
+.navbar-default .navbar-nav>li>a:hover {
+  color:#66C3BC;
 }
 .navbar {
   border-radius: 0px;
