@@ -596,7 +596,9 @@ table .checkbox input[type="checkbox"] {
 .alert-danger a {
   color: #953b39;
 }
-
+a {
+  color: #2a6496;
+}
 #navbar{
   background-color: #10206B;
   border: 0px;
@@ -616,6 +618,7 @@ a:hover.name.navbar-brand,
 }
 .main-container {
   background-color: #25AAA0;
+  padding-bottom: 5px;
 }
 .page-header {
   border-bottom: 0px;
@@ -630,4 +633,10 @@ h1.page-header {
 }
 .view-blog h3>a{
  color:#2a6496;
+}
+.field-name-body {
+  padding: 5px 0 0 0;
+}
+section#block-views-related-blogs-block {
+  padding-top: 5px;
 }
