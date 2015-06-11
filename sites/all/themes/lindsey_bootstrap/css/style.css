@@ -622,5 +622,12 @@ a:hover.name.navbar-brand,
 }
 h1.page-header {
   padding-top: 10px;
+  margin-bottom: 0px;
 }
-
+.view-blog .field-name-field-date {
+  padding: 0 0 5px 0;
+  font-style: italic;
+}
+.view-blog h3>a{
+ color:#2a6496;
+}
