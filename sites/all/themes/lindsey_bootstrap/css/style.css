@@ -12,7 +12,9 @@ html.js input.form-autocomplete {
 body {
   position: relative;
   font-family: 'Oswald', sans-serif;
+  font-size: 1.35em;
   background-color: #f1efe6;
+  padding-top: 50px;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
