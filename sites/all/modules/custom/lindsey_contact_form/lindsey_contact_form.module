@@ -37,9 +37,11 @@ function lindsey_contact_form_form($node, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Email'),
     '#required' => TRUE,
-    '#default_value' => $user->mail,
     '#element_validate' => array('lindsey_form_email_validate'),
-  );
+    );
+    if(!user_is_anonymous()) {
+      $form['input_email']['#default_value'] = $user->mail;
+    }
   $form['input_select_reason'] = array(
     '#type' => 'select',
     '#title' => 'Reason for Contact',
