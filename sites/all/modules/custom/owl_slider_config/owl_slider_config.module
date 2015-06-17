@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Owl Slider Config feature.
+ */
+
+include_once 'owl_slider_config.features.inc';

@@ -642,3 +642,7 @@ h1.page-header {
 section#block-views-related-blogs-block {
   padding-top: 5px;
 }
+.front-page-slider {
+  padding-top: 15px;
+  text-align: center;
+}

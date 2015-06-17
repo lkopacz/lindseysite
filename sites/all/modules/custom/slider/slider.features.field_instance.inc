@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * front_slide.features.field_instance.inc
+ * slider.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function front_slide_field_default_field_instances() {
+function slider_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-slide-field_slide'
@@ -20,16 +20,24 @@ function front_slide_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'caption' => FALSE,
           'image_link' => '',
           'image_style' => '',
+          'optionset' => 'default',
         ),
         'type' => 'image',
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'caption' => FALSE,
+          'image_link' => '',
+          'image_style' => '',
+          'optionset' => 'default',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
     ),
@@ -38,7 +46,7 @@ function front_slide_field_default_field_instances() {
     'label' => 'Slide',
     'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
