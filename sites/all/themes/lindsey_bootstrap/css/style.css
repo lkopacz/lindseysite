@@ -646,7 +646,10 @@ section#block-views-related-blogs-block {
   padding-top: 15px;
   text-align: center;
 }
-
 #first-time {
   display: none;
+}
+.footer-style {
+  color: #f1efe6;
+  float: right;
 }
