@@ -646,3 +646,7 @@ section#block-views-related-blogs-block {
   padding-top: 15px;
   text-align: center;
 }
+
+#first-time {
+  display: none;
+}
