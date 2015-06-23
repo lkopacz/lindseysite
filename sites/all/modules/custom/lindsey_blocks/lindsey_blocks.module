@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * 
+ * Modules that creats a coded blocks.  
+ */
+ 
+ 
+ 
+/**
+ * Implements hook_block_info
+ */
+function lindsey_blocks_block_info(){
+  $blocks['footer_block'] = array(
+    'info' => t('Footer Info'),
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function lindsey_blocks_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'footer_block':
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#markup' => 'This site was built in Drupal Bootstrap by Lindsey Kopacz',
+      );
+      break;
+  }
+  
+  return $block;
+}
